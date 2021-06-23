@@ -1,3 +1,5 @@
+/* General Cascade*/
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -10,7 +12,7 @@ body {
 }
 
 
-/* HEADER / NAV BAR STYLES START */
+/* Header / NAV Bar styles start */
 
 header {
   padding: 20px 35px;
@@ -45,16 +47,16 @@ header nav ul {
 }
 
 header nav ul li a {
-  margin: 0 30px;
+  padding: 10px 15px;
   font-weight: lighter;
   font-size: 1.55vw;
 }
 
-/* HEADER / NAVBAR STYLES END */
+/* Header / NAV Bar style end*/
 
 
 
-/* FOOTER STYLES START */
+/* Footer start */
 footer {
   background: #fce138;
   padding: 40px 35px;
@@ -78,14 +80,14 @@ footer div {
 footer a {
   color: #024e76;
 }
-/* END FOOTER STYLES */
+/* Footer end */
 
-/* STYLE ALL SECTION TAGS */
+/* Section Tages */
 section {
   padding: 60px;
 }
 
-/* HERO STYLES START */
+/* Hero Start */
 .hero {
   background-image: url('../pictures/hero-bg.jpg');
   background-size: cover;
@@ -93,6 +95,7 @@ section {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  align-items: flex-start;
 }
 
 .hero-cta {
@@ -101,7 +104,7 @@ section {
   margin: 3.5%;
   color: #fff;
   font-size: 18px;
-  line-height: 1.3;
+  line-height: 1.2;
 }
 
 .hero-cta h2 {
@@ -148,12 +151,12 @@ section {
   padding: 10px 20px;
   font-size: 16px;
 } 
-/* HERO STYLES END */
+/* Hero End */
 
 
-/* SECTION TITLE STYLES START */
+/* Section Titles Start */
 .section-title {
-  font-size: 55px;
+  font-size: 48px;
   border-bottom: 3px solid;
   color: #024e76;
   padding-bottom: 20px;
@@ -169,9 +172,9 @@ section {
 .secondary-border {
   border-color: #39a6b2;
 }
-/* SECTION TITLE STYLES END */
+/* Section Titles End */
 
-/* WHAT WE DO STYLES */
+/* "What We Do" */
 
 .intro p {
   line-height: 1.7;
@@ -181,7 +184,7 @@ section {
   font-size: 20px;
   text-align: center;
 }
-/* WHAT YOU DO STYLES END */
+/*"What We Do end" */
 
 
 /* WHAT YOU DO STYLES START */
@@ -358,4 +361,112 @@ section {
 
 .flex-row {
   display: flex;
+}
+
+/* MQ for smaller desktop screens and smaller */
+@media screen and (max-width: 980px) {
+  header {
+    padding-bottom: 0;
+    justify-content: center;
+  }
+
+  header h1 {
+    width: 100%;
+    text-align: center;
+  }
+
+  header nav ul {
+    margin-top: 20px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  header nav ul li a {
+    font-size: 20px;
+  }
+
+  footer h2, footer div {
+    text-align: center;
+    width: 100%;
+  }
+
+  .her-cta, .hero-form {
+    width: 100%;
+  }
+
+  .hero-cta {
+    text-align: center;
+  }
+
+  .section-title {
+    width: 80%;
+  }
+
+  .trainer {
+    flex: 0 70%;
+  }
+
+  .contact-info iframe {
+    flex: 1 100%;
+  }
+}
+
+/*MQ for Tablets and smaller */
+@media screen and (max-width: 768px) {
+  section {
+    padding: 30px 15px;
+  }
+
+  .step h3 {
+    flex: 1 100%;
+    text-align: center;
+  }
+
+  .step-info {
+    flex: 2 100%;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .step-img {
+    flex: 0 32%;
+    margin-right: 0;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  .step-text {
+    flex: 100%;
+  }
+}
+
+/*MQ for mobile phones and smaller */
+@media screen and (max-width: 575px) {
+  .hero-form button {
+    width: 100%;
+  }
+
+  .section-title {
+    width: 95%;
+  }
+
+  .intro p {
+    width: 100%;
+  }
+
+  .trainer {
+    flex: 0 100%;
+  }
+
+  .contact-info {
+    text-align: center;
+  }
+
+  .contact-info > * {
+    flex: 0 100%;
+  }
+
+  .contact-form {
+    order: 3;
+  }
 }
